@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 import { useRouter } from 'next/router'
 import AnchorLink from './AnchorLink'
 import Button from './Button'
@@ -20,10 +20,6 @@ function Layout({ children }) {
             </>
         )
     }
-
-    useEffect(() => {
-        console.log(router.asPath)
-    }, [router.basePath])
 
 
     return router.asPath === "/authentication" ? (

@@ -1,4 +1,5 @@
 import React from 'react'
+import ImageCard from './ImageCard'
 
 function CardEdit({ sections, edit, data, handleCardDetail, index }) {
     return (
