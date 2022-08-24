@@ -10,9 +10,8 @@ function AdvantageCard({ data, edit, handleCardDetail, index }) {
 
     useEffect(() => {
         //Get all sections from Data
-        if (data !== null) {
+        if ((data !== null) && (data !== undefined)) {
             setSections(Object.keys(data))
-            console.log(data)
         }
     }, [data])
 

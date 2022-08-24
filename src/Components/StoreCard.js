@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { AnimationContext } from './Context'
-import ImageCard from './ImageCard'
 import CardEdit from './CardEdit'
 
 function StoreCard({ data, image, edit, handleCardDetail, index }) {
@@ -11,7 +10,7 @@ function StoreCard({ data, image, edit, handleCardDetail, index }) {
 
     useEffect(() => {
         //Get all sections from Data
-        if (data !== null) {
+        if ((data !== null) && (data !== undefined) ) {
             setSections(Object.keys(data))
         }
     }, [data])

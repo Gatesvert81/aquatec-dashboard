@@ -75,59 +75,89 @@ function EditCard({ collection, document }) {
         // Display Card Based on the cardstyle of section
         switch (data?.Cardstyle) {
             case "Choose":
-                return cardsData?.map((cardData, index) => (
-                    <ChooseCard
-                        number={`0${index + 1}`}
-                        edit={edit}
-                        key={index}
-                        index={index}
-                        data={cardData}
-                        handleCardDetail={handleCardDetail} />
-                ))
+                return (
+                    <div className='section-grid md:grid-cols-2' >
+                        {
+                            cardsData?.map((cardData, index) => (
+                                <ChooseCard
+                                    number={`0${index + 1}`}
+                                    edit={edit}
+                                    key={index}
+                                    index={index}
+                                    data={cardData}
+                                    handleCardDetail={handleCardDetail} />
+                            ))
+                        }
+                    </div>
+                )
             case "Store":
-                return cardsData?.map((cardData, index) => (
-                    <StoreCard
-                        image="cleaning.JPG"
-                        key={`${index}${cardData}`}
-                        edit={edit}
-                        index={index}
-                        data={cardData}
-                        handleCardDetail={handleCardDetail}
-                    />
-
-                ))
+                return (
+                    <div className='section-grid md:grid-cols-3 ' >
+                        {
+                            cardsData?.map((cardData, index) => (
+                                <StoreCard
+                                    image="cleaning.JPG"
+                                    key={`${index}${cardData}`}
+                                    edit={edit}
+                                    index={index}
+                                    data={cardData}
+                                    handleCardDetail={handleCardDetail}
+                                />
+                            )
+                            )
+                        }
+                    </div>
+                )
             case "Projects":
-                return cardsData?.map((cardData, index) => (
-                    <ProjectCard
-                        number={`0${index + 1}`}
-                        image="cleaning"
-                        key={`${index}${cardData}`}
-                        edit={edit}
-                        index={index}
-                        data={cardData}
-                        handleCardDetail={handleCardDetail}
-                    />
-                ))
+                return (
+                    <div className='section-grid md:grid-cols-2 ' >
+                        {
+                            cardsData?.map((cardData, index) => (
+                                <ProjectCard
+                                    number={`0${index + 1}`}
+                                    image="cleaning"
+                                    key={`${index}${cardData}`}
+                                    edit={edit}
+                                    index={index}
+                                    data={cardData}
+                                    handleCardDetail={handleCardDetail}
+                                />
+                            ))
+                        }
+                    </div>
+                )
             case "Director":
-                return cardsData?.map((cardData, index) => (
-                    <DirectorCard
-                        key={`${index}${cardData}`}
-                        edit={edit}
-                        index={index}
-                        data={cardData}
-                        handleCardDetail={handleCardDetail}
-                    />
-                ))
+                return (
+                    <div className='section-grid md:grid-cols-3 ' >
+                        {
+                            cardsData?.map((cardData, index) => (
+                                <DirectorCard
+                                    key={`${index}${cardData}`}
+                                    edit={edit}
+                                    index={index}
+                                    data={cardData}
+                                    handleCardDetail={handleCardDetail}
+                                />
+                            ))
+                        }
+                    </div>
+                )
             case "Advantage":
-                return cardsData?.map((cardData, index) => (
-                    <AdvantageCard
-                        key={`${index}${cardData}`}
-                        edit={edit}
-                        index={index}
-                        data={cardData}
-                        handleCardDetail={handleCardDetail}
-                    />
-                ))
+                return (
+                    <div className='section-grid md:grid-cols-3 ' >
+                        {
+                            cardsData?.map((cardData, index) => (
+                                <AdvantageCard
+                                    key={`${index}${cardData}`}
+                                    edit={edit}
+                                    index={index}
+                                    data={cardData}
+                                    handleCardDetail={handleCardDetail}
+                                />
+                            ))
+                        }
+                    </div>
+                )
             default:
                 break;
         }
@@ -186,9 +216,9 @@ function EditCard({ collection, document }) {
                             <label>
                                 Cards
                             </label>
-                            <div className='section-grid' >
-                                {displayCards()}
-                            </div>
+                            {/* <div className='section-grid' > */}
+                            {displayCards()}
+                            {/* </div> */}
                         </fieldset>
 
                     ) : null

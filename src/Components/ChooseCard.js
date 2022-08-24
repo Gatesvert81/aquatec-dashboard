@@ -11,7 +11,7 @@ function ChooseCard({ number, data, edit, handleCardDetail, index }) {
 
     useEffect(() => {
         //Get all sections from Data
-        if (data !== null) {
+        if ((data !== null) && (data !== undefined) ) {
             setSections(Object.keys(data))
         }
     }, [data])

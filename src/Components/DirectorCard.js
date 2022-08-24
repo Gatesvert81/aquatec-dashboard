@@ -9,9 +9,8 @@ function DirectorCard({ data, edit, handleCardDetail, index }) {
 
     useEffect(() => {
         //Get all sections from Data
-        if (data !== null) {
+        if ((data !== null) && (data !== undefined)) {
             setSections(Object.keys(data))
-            console.log(data)
         }
     }, [data])
 
@@ -26,10 +25,10 @@ function DirectorCard({ data, edit, handleCardDetail, index }) {
     ) : (
         <motion.div className='text-center' {...textAnimate} >
             <motion.h5>
-                {data?.Name}
+                {data?.Title}
             </motion.h5>
             <motion.h6 className='text-black/60' >
-                {data?.Position}
+                {data?.Description}
             </motion.h6>
         </motion.div>
     )

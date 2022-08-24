@@ -48,16 +48,16 @@ function Navigation() {
                 <div className='hidden md:flex justify-start items-center gap-10' >
                     <AnchorLink route="/about">
                         <Button
-                            style={`side-nav-btn ${page === 'about' ? "page" : null} `}
-                            click={() => setPage('about')}
+                            style={`side-nav-btn ${page === 'About' ? "page" : null} `}
+                            click={() => setPage('About')}
                         >
                             About
                         </Button>
                     </AnchorLink>
                     <AnchorLink route="/projects">
                         <Button
-                            style={`side-nav-btn ${page === 'projects' ? "page" : null} `}
-                            click={() => setPage('projects')}
+                            style={`side-nav-btn ${page === 'Projects' ? "page" : null} `}
+                            click={() => setPage('Projects')}
                         >
                             Projects
                         </Button>
@@ -69,18 +69,18 @@ function Navigation() {
                     </AnchorLink>
                 </div>
                 <div className='hidden md:flex justify-start items-center gap-10'>
-                    <AnchorLink route="https://www.foodandagriculturelaw.com/aquatec">
+                    <AnchorLink route="/store">
                         <Button
-                            style={`side-nav-btn ${page === 'store' ? "page" : null} `}
-                            click={() => setPage('store')}
+                            style={`side-nav-btn ${page === 'Store' ? "page" : null} `}
+                            click={() => setPage('Store')}
                         >
                             Store
                         </Button>
                     </AnchorLink>
                     <AnchorLink route="/contact">
                         <Button
-                            style={`side-nav-btn ${page === 'contact' ? "page" : null} `}
-                            click={() => setPage('contact')}
+                            style={`side-nav-btn ${page === 'Contact' ? "page" : null} `}
+                            click={() => setPage('Contact')}
                         >
                             Contact
                         </Button>

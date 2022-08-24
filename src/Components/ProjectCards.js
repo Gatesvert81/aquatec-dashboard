@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { AnimationContext } from './Context'
 import Image from 'next/image'
-import ImageCard from './ImageCard'
 import CardEdit from './CardEdit'
 
 function ProjectCard({ data, number, edit, handleCardDetail, index, image }) {
@@ -13,9 +12,8 @@ function ProjectCard({ data, number, edit, handleCardDetail, index, image }) {
 
     useEffect(() => {
         //Get all sections from Data
-        if (data !== null) {
+        if ((data !== null) && (data !== undefined) ) {
             setSections(Object.keys(data))
-            console.log(data)
         }
     }, [data])
 
