@@ -64,7 +64,7 @@ function Navigation() {
                     </AnchorLink>
                 </div>
                 <div>
-                    <AnchorLink route="/">
+                    <AnchorLink route="/" click={() => setPage("Home")} >
                         <Logo />
                     </AnchorLink>
                 </div>
