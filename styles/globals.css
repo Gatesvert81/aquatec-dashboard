@@ -43,12 +43,16 @@
     @apply text-lg md:text-xl font-semibold uppercase
   }
 
+  form{
+    @apply w-full h-fit grid grid-cols-1 gap-3
+  }
+
   fieldset{
     @apply w-full flex flex-col 
   }
 
   label{
-    @apply text-sm font-medium
+    @apply text-sm font-medium capitalize
   }
 
   input, textarea{
@@ -64,7 +68,11 @@
 @layer components {
 
   .primary-btn {
-    @apply w-fit h-fit py-2 px-5 text-center text-white bg-sea-blue rounded-lg
+    @apply w-fit h-fit py-2 px-5 text-center text-white bg-sea-blue rounded-lg font-medium
+  }
+
+  .secondary-btn {
+    @apply w-fit h-fit py-2 px-5 text-center text-sea-blue border-2 border-sea-blue rounded-lg font-medium
   }
 
   .side-nav-btn {
@@ -97,6 +105,10 @@
 
   .project:hover > .project-detail {
     @apply bottom-0 left-0 transition duration-500 ease-linear
+  }
+
+  .section-grid {
+    @apply w-full h-fit grid grid-cols-1 gap-3 justify-items-center
   }
 
 }
