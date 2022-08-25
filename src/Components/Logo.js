@@ -2,7 +2,7 @@ import Image from 'next/image'
 import React, { useContext, useEffect } from 'react'
 import { NavContext } from './Context'
 
-function Logo() {
+function Logo({sideNav, show}) {
     const [page, setPage] = useContext(NavContext)
 
     useEffect(() => {
@@ -14,7 +14,7 @@ function Logo() {
             <div className='w-10 h-12 relative' >
                 <Image src="/icons/logo.png" alt="Aquatec logo" layout="fill" className="object-contain" />
             </div>
-            <div className="text-black text-left " >
+            <div className={` ${ show ? "text-white" : "text-black"} ${ sideNav ? "text-white" : "text-black"} transition duration-500 ease-in-out text-left `} >
                 <h5 >
                     Aquatec
                 </h5>

@@ -1,6 +1,7 @@
 import { doc, getDoc, setDoc } from 'firebase/firestore'
 import React, { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
+import { toast } from 'react-toastify'
 import { db } from '../Firebase/firebaseConfig'
 import AdvantageCard from './AdvantageCard'
 import Button from './Button'
@@ -26,13 +27,15 @@ function EditCard({ collection, document }) {
 
     useEffect(() => {
         //Get data of Section
+        // const id = toast.loading("Please wait...")
         const docRef = doc(db, collection, document);
         const docSnap = getDoc(docRef)
         docSnap.then((snapshot) => {
             setData(snapshot.data())
+            // toast.update(id, { render: "Successfully Retrieved Sections", type: "success", isLoading: false })
         })
             .catch((error) => {
-                console.error(error)
+                // toast.update(id, { render: error.message, type: "error", isLoading: false })
             });
     }, [])
 

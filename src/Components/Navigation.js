@@ -4,6 +4,7 @@ import AnchorLink from './AnchorLink'
 import Button from './Button'
 import { NavContext } from './Context'
 import Logo from './Logo'
+import UserAvatar from './UserAvatar'
 
 function Navigation() {
 
@@ -63,10 +64,13 @@ function Navigation() {
                         </Button>
                     </AnchorLink>
                 </div>
-                <div>
+                <div className="flex justify-start items-center gap-2" >
                     <AnchorLink route="/" click={() => setPage("Home")} >
-                        <Logo />
+                        <Logo sideNav={sideNav} show={show} />
                     </AnchorLink>
+                    <div className='hidden md:block' >
+                        <UserAvatar />
+                    </div>
                 </div>
                 <div className='hidden md:flex justify-start items-center gap-10'>
                     <AnchorLink route="/store">
@@ -159,6 +163,7 @@ function Navigation() {
                                     Contact
                                 </Button>
                             </AnchorLink>
+                            <UserAvatar />
                         </motion.nav>
                     )
                 }
