@@ -109,8 +109,14 @@ function CardEdit({ sections, edit, data, handleCardDetail, index }) {
                             Images
                         </label>
                         <div className='section-grid' >
-                            <ImageCard />
-                            <ImageCard />
+                            <div>
+                                <input 
+                                    type='file' 
+                                    onChange={(e) => handleCardDetail(e)} 
+                                    name="image" 
+                                    // defaultValue={data?.image}
+                                    />
+                            </div>
                         </div>
                     </fieldset>
                 ) : null

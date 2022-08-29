@@ -7,8 +7,6 @@ function ChooseCard({ number, data, edit, handleCardDetail, index }) {
     const { textAnimate } = useContext(AnimationContext)
     const [sections, setSections] = useState([])
 
-    console.log(data)
-
     useEffect(() => {
         //Get all sections from Data
         if ((data !== null) && (data !== undefined) ) {

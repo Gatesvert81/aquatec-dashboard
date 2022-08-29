@@ -24,9 +24,9 @@ function Projects() {
             {
                 sections.map((section, index) => (
                     <section key={`${index} ${section}`} >
-                        <h3>
+                        {/* <h3>
                             {section}
-                        </h3>
+                        </h3> */}
                         <EditCard document={section} collection="Projects" key={section} />
                     </section>
                 ))

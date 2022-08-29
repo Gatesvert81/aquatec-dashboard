@@ -4,11 +4,15 @@ import { AnimationContext } from './Context'
 import Image from 'next/image'
 import CardEdit from './CardEdit'
 
-function ProjectCard({ data, number, edit, handleCardDetail, index, image }) {
+function ProjectCard({ data, number, edit, handleCardDetail, index, image, path }) {
     const { imageAnimate } = useContext(AnimationContext)
 
     const [hover, setHover] = useState(false)
     const [sections, setSections] = useState([])
+
+    console.log({
+        cardPath: path
+    })
 
     useEffect(() => {
         //Get all sections from Data

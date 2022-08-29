@@ -33,7 +33,9 @@ function Context({ children }) {
     // Get Page Sections 
     useEffect(() => {
         if (user) {
-            const id = toast.loading("Please wait...")
+            // const id = toast.loading("Please wait...", {
+            //     autoClose: 3000
+            // })
             const colRef = collection(db, page);
             const docSnap = getDocs(colRef)
             docSnap.then((snapshot) => {
@@ -42,10 +44,20 @@ function Context({ children }) {
                     home.push(doc.id)
                 ))
                 setSections([...home])
-                toast.update(id, { render: "Successfully Retrieved Sections", type: "success", isLoading: false })
+                // toast.update(id, { 
+                //     render: "Successfully Retrieved Sections", 
+                //     type: "success", 
+                //     isLoading: false,
+                //     autoClose: 1500 
+                // })
             })
                 .catch((error) => {
-                    toast.update(id, { render: error.message, type: "error", isLoading: false })
+                    // toast.update(id, {
+                    //     render: error.message,
+                    //     type: "error",
+                    //     isLoading: false,
+                    //     autoClose: 1500
+                    // })
                 });
         }
     }, [page, user])

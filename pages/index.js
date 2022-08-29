@@ -15,11 +15,6 @@ function Home() {
     console.log(sections)
   }, [])
 
-  useEffect(() => {
-    console.log({ sections })
-  }, [sections])
-
-
 
   return (
     <div className='pt-20' >
